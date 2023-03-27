@@ -48,7 +48,7 @@ class ProdutoDAO extends Conexao
 
     public function ExcluirProdutoDAO()
     {
-        $sql = $this->conexao->prepare(ProdutoSQL::CONSULTAR_PRODUTO());
+        $sql = $this->conexao->prepare(ProdutoSQL::EXCLUIR_PRODUTO());
         $sql->execute();
         return $sql->fetchAll(\PDO::FETCH_ASSOC);
     }
