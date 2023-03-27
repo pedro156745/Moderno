@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------
+DATA: 05/03/2023
+HORA: 01:27:53
+Função: InserirProdutoCTRL
+Cod.Logado: 1
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_moderno`.`tb_produto`, CONSTRAINT `fk_tb_produto_tb_fornedor1` FOREIGN KEY (`fornecedor_id`) REFERENCES `tb_fornedor` (`fornecedor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+-------------------------------------------------------------------------
+DATA: 05/03/2023
+HORA: 16:45:05
+Função: InserirContaCTRL
+Cod.Logado: 1
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_usuario' cannot be null
+-------------------------------------------------------------------------
+DATA: 05/03/2023
+HORA: 16:48:16
+Função: InserirContaCTRL
+Cod.Logado: 1
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_moderno`.`tb_conta`, CONSTRAINT `fk_tb_conta_tb_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+-------------------------------------------------------------------------
+DATA: 05/03/2023
+HORA: 16:50:44
+Função: InserirContaCTRL
+Cod.Logado: 1
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_moderno`.`tb_conta`, CONSTRAINT `fk_tb_conta_tb_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+-------------------------------------------------------------------------
+DATA: 05/03/2023
+HORA: 16:51:25
+Função: InserirContaCTRL
+Cod.Logado: 1
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_moderno`.`tb_conta`, CONSTRAINT `fk_tb_conta_tb_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 21:00:24
+Função: InserirFornecedorCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_moderno.tb_fornecedor' doesn't exist
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 21:00:57
+Função: InserirFornecedorCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 21:01:12
+Função: InserirFornecedorCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_moderno.tb_fornecedor' doesn't exist
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 21:01:23
+Função: InserirFornecedorCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_moderno.tb_fornecedor' doesn't exist
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 21:02:24
+Função: InserirFornecedorCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 22:30:16
+Função: InserirContaCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+-------------------------------------------------------------------------
+DATA: 18/03/2023
+HORA: 22:48:29
+Função: InserirContaCTRL
+Cod.Logado: 5
+Erro:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_usuario' cannot be null
