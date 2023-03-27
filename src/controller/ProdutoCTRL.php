@@ -42,13 +42,22 @@ class ProdutoCTRL
 
     public function ConsultarProdutoCTRL(ProdutoVO $vo)
     {
-       
+
         $list = $this->dao->ConsultarProdutoDAO($vo->getIdPessoa());
-        
+
         for ($i = 0; $i < count($list); $i++) {
             $list[$i]['nome_url'] =  Util::RetornarPathAnexo($vo->getTipoAnexo()) .  $list[$i]['nome_url'];
         }
 
         return $list;
+    }
+
+    public function ExcluirProdutoCTRL(ProdutoVO $vo)
+    {
+        if (empty($vo->getIdProduto()))
+
+            return 0;
+
+        return $this->dao->ExcluirProdutoDAO($vo);
     }
 }

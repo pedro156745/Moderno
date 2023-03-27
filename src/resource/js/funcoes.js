@@ -115,6 +115,11 @@ function CarregarExclusaoCategoria(id, nome_excluir) {
     $("#id_altexcluir").val(id);
     $("#nome_reg").html(nome_excluir);
 }
+
+function CarregarExclusaoProduto(id, nome_excluir) {
+    $("#id_altexcluir").val(id);
+    $("#nome_reg").html(nome_excluir);
+}
 function CarregarALteracaoModelo(id, modelo) {
     $("#id_alt").val(id);
 

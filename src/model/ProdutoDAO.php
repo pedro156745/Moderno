@@ -46,10 +46,20 @@ class ProdutoDAO extends Conexao
         return $sql->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function ExcluirProdutoDAO()
+    public function ExcluirProdutoDAO(ProdutoVO $vo)
     {
         $sql = $this->conexao->prepare(ProdutoSQL::EXCLUIR_PRODUTO());
-        $sql->execute();
-        return $sql->fetchAll(\PDO::FETCH_ASSOC);
+        $i = 1;
+
+        $sql->bindValue($i++, $vo->getIdProduto());
+
+        try {
+            $sql->execute();
+            return 1;
+        } catch (Exception $ex) {
+            $vo->setMsgerro($ex->getMessage());
+            parent::GravarLogErrO($vo);
+            return -1;
+        }
     }
 }

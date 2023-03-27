@@ -147,7 +147,7 @@
                                     </div>
                                     <!-- /.card-header -->
                                     <div class="card-body table-responsive p-0">
-                                        <table class="table table-hover">
+                                        <table class="table table-hover" id="resultado">
                                             <thead>
                                                 <tr>
                                                     <th>Categoria</th>
@@ -166,13 +166,14 @@
                                                         <td><?= $anexos[$i]['quantidade'] ?></td>
                                                         <td>R$<?= $anexos[$i]['preco'] ?></td>
                                                         <td><a href="<?= $anexos[$i]['nome_url'] ?>" target="_blank"> <img src=" <?= $anexos[$i]['nome_url'] ?>" height="50" width="50px"></a></td>
-                                                        <td><i class="btn fas fa-edit"></i> <i class="btn fas fa-trash-alt" style="color:red"></i></td>
+                                                        <td><a href="#" data-toggle="modal" data-target="#excluir" onclick="CarregarExclusaoProduto('<?= $anexos[$i]['id_produto'] ?>', '<?= $anexos[$i]['nome_produto'] ?>')"  class="btn btn-danger btn-xs">Excluir</a></td>
                                                     </tr>
 
                                                 <?php } ?>
                                             </tbody>
                                         </table>
                                     </div>
+                                    <?php include_once '../../view/admin/Modals/excluir.php' ?>
                                     <!-- /.card-body -->
                                 </div>
                                 <!-- /.card -->
@@ -207,6 +208,9 @@
 
 
         <?php include_once PATH_URL . '/template/_includes/_msg.php' ?>
+
+        <script src="../../resource/ajax/produto_ajx.js"></script>
+
 
 </body>
 
